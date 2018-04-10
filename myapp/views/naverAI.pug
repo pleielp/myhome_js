@@ -1,0 +1,15 @@
+extends layout
+
+block sideMenu
+  
+  include sidemenu
+
+block content
+
+  //- menu list
+  -
+    var dict = {1:{1:'개요'},
+                2:{2:'이론적 배경'},3:{2.1:'머신러닝'},4:{2.3:'Python'},5:{2.4:'Tensorflow'},
+                6:{3:'...'}}
+  
+  include article

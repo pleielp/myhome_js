@@ -1,0 +1,52 @@
+extends layout
+
+block sideMenu
+  
+  include sidemenu
+
+block content
+
+  //- article
+  //- article(class="article" id="article")
+
+  //- header
+  header.major Search Result
+
+  //- number of results
+  span.article_side!= search_results.length + ' results searched.'
+
+  br
+  br
+
+  div
+
+    -for(var i in search_results)
+      -var result = search_results[i]
+      -var topic = result[0]
+      -var pos = result[1]
+      -var keyword = result[2]
+      -var result_sentence = result[3]
+      -var dummy_length = result[4]
+      -var result_width = result[5]
+
+      if result_sentence.length < 2 * result_width
+        //- keyword is at the front 
+        if pos < result_width
+          a(href="/project/"+topic+'?keyword='+keyword+'&pos='+pos)
+            | #{result_sentence.slice(0, pos)}
+            | #[b= result_sentence.slice(pos, pos + keyword.length)]
+            | #{result_sentence.slice(pos + keyword.length, result_sentence.length)}
+        //- keyword is at the back
+        else
+          a(href="/project/"+topic+'?keyword='+keyword+'&pos='+pos)
+            -var pos_temp = result_sentence.length - (dummy_length - pos)
+            | #{result_sentence.slice(0, pos_temp)}
+            | #[b= result_sentence.slice(pos_temp, pos_temp + keyword.length)]
+            | #{result_sentence.slice(pos_temp + keyword.length, result_sentence.length)}
+      //- keyword is in the middle
+      else 
+        a(href="/project/"+topic+'?keyword='+keyword+'&pos='+pos)
+          | #{result_sentence.slice(0, result_width)}
+          | #[b= result_sentence.slice(result_width, result_width + keyword.length)]
+          | #{result_sentence.slice(result_width + keyword.length, 2 * result_width)}
+      hr

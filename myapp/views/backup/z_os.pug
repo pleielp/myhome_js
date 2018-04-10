@@ -1,0 +1,57 @@
+//- doctype html
+//- html
+//- head
+//-   title Plei@Home
+//-   meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+//-   meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-   link(rel="stylesheet", href="stylesheets/main.css")
+//-   script(type="text.javascript" src="javascripts/main.js")
+article(class="article" id="article")
+  header(class="major") Os
+  span(onclick="showDate()" id="date") show_date err
+  fieldset(class="fieldset" id="index")
+    legend(class="fieldset" id="index") 목차
+    dl
+      dt.
+        #[a(href="#s-1") 1]. 1번
+      dt.
+        #[a(href="#s-2") 2]. 2번
+      dt.
+        #[a(href="#s-2.1") 2.1]. 2.1번
+      dt.
+        #[a(href="#s-3") 3]. 3번
+      dt.
+        #[a(href="#s-3.1") 3.1]. 3.1번
+      dt.
+        #[a(href="#s-3.2") 3.2]. 3.2번
+      dt.
+        #[a(href="#s-#") #]. 참고자료
+  div(id="s-1")
+    h2.
+      #[a(href="#index") 1. ]1번
+    p
+  div(id="s-2")
+    h2.
+      #[a(href="#index") 2. ]2번
+    p
+  div(id="s-2.1")
+    h2.
+      #[a(href="#index") 2.1. ]2.1번
+    p
+  div(id="s-3")
+    h2.
+      #[a(href="#index") 3. ]3번
+    p
+  div(id="s-3.1")
+    h2.
+      #[a(href="#index") 3.1. ]3.1번
+    p
+  div(id="s-3,2")
+    h2.
+      #[a(href="#index") 3.2. ]3.2번
+    p
+  div(id="s-#")
+    h2.
+      #[a(href="#index") #. ]참고자료
+    p
+    

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+  body
+    h1
+      a(href="/test") Server Side JavaScript
+    ul
+      each topic in topics
+        li
+          a(href="/test/"+topic)= topic
+    article
+        form(action="/test", method="post")
+            p
+                input(type="text" name="title" placeholder="title")
+            p
+                textarea(name="description")
+            p
+                input(type="submit")

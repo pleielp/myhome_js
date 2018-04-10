@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <title>Plei@Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Plei's blog">
+    <meta name="keywords" content="Plei">
+    <meta name="author" content="taeyoungkim">
+    <!-- <meta http-equiv="refresh" content="118"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link -->
+    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="document.css"> -->
+    <!-- Scripts -->
+    <script type="text/javascript" src="main.js"></script>
+    <!-- <script type="text/javascript" src="tutorial/script.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="main.html" class="logo">
+                        <strong>PLEI</strong>@Home</a>
+                    <form action="document/template.html" method="POST" , class="search">
+                        <input type="text" placeholder="search">
+                        <button type="submit" id="search">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <!-- <img id="search" src="source/search_icon3.png"> -->
+                    </form>
+                    <div class="icon">
+                        <a href="https://github.com/pleielp" id="github">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </header>
+                <!-- Nav -->
+                <!-- <nav><ul><li><a href="main.html">Home</a></li></ul></nav> -->
+                <!-- Aside -->
+                <aside id="aside">
+                    <!-- Search -->
+                    <div class="search"></div>
+                    <!-- aside= -->
+                    <nav id="nav">
+                        <div class="major">Menu</div>
+                        <ul>
+                            <li>
+                                <a href="main.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="main.html">Home</a>
+                            </li>
+                        </ul>
+                        <div class="major">Project</div>
+                        <ul>
+                            <li>
+                                <span onclick="pageWeb()" id="project1">Web</span>
+                            </li>
+                            <li>
+                                <span onclick="pageOs()" id="project2">OS</a>
+                            </li>
+                            <li>
+                                <span onclick="pageTemplate()" id="project3">Template</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <!-- Section -->
+                <section id="section">
+                    <div class="inner">
+                        <!-- <header class="major">Theme</header> -->
+                        <!-- Article -->
+                        <article id="article2">
+                            <iframe src="document/home.html" id="document" scrolling="no"></iframe>
+                        </article>
+                        <!-- <script>
+                            function resizeIFrameToFitContent(iFrame) {
+                                iFrame.width = iFrame.contentWindow.document.body.scrollWidth;
+                                iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+                            }
+
+                            window.addEventListener('DOMContentLoaded', function (e) {
+                                var iFrame = document.getElementById('article2');
+                                resizeIFrameToFitContent(iFrame);
+                            });
+                        </script> -->
+                    </div>
+                </section>
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="shortcut">
+                        <a href="main.html">홈으로</a> &nbsp;&nbsp;| &nbsp;&nbsp;
+                        <a href="#header">맨위로</a>
+                    </p>
+                    <p class="copyleft">BY PLEI. COPYLEFT, ALL RIGHT UNRESERVED.</p>
+                    <!-- <span class="shortcut"><p >
+                    <a href="main.html">홈으로</a> | <a href="#header">맨위로</a></p>
+                    <span class="copyleft">SKIN BY PLEI. COPYLEFT, ALL RIGHT UNRESERVED</span> -->
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

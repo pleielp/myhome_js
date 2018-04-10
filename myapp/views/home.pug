@@ -1,0 +1,53 @@
+extends layout
+
+block sideMenu
+
+  include sidemenu
+
+block content
+  article(class="article" id="article")
+    p.major Welcome
+    ul#homeUl(style="float:right;")
+      li 3월 10일 홈페이지 첫 공사 착수.
+      li 3월 11일 html 뼈대 작성완료.
+      li 3월 12일 css 틀 작성완료.
+      li 3월 13일 javascript 일부완료.
+      li 3월 14일 express 서버개설.
+      li 3월 15일 html에서 pug로 이전완료.
+      li 3월 16일 router 증설 및 dbms 공부.
+      li 3월 17일 mysql 이식완료.
+      li 3월 18일 포트포워딩 후 도메인 등록.
+      li 3월 19일 cashe 기반 좋아요 기능 구현.
+      li 3월 20일 session 기반 계정 관리 기능 구현1.
+      li 3월 21일 session 기반 계정 관리 기능 구현2.
+      li 3월 22일 다중 계정 관리 기능 추가.
+      li 3월 23일 코드 최적화 및 레이아웃 수정.
+      li 3월 24일 PBKDF2 단방향 패스워드 암호화.
+      li 3월 25일 article 부분 mysql 모듈화.
+      li 3월 26일 pug extends 기능 활용 및 코드 최적화.
+      li 3월 27일 article-MySQL CRUD 자동화.
+      li 3월 28일 article 검색기능 구현.
+    div(style="margin:0;") &nbsp;
+    div.account
+      case account
+        when "login"
+          form.textbox#toLogin(action="/login", method="post")
+            input#id(type="text" placeholder="ID: " name="id")
+            input#pw(type="password" placeholder="PW: " name="pw")
+          form#toRegister(action="/", method="post" style="display:inline-block;")
+          button.buttons(type="submit" form="toLogin" style="border-top-color:#FFFFFF") Login
+          button.buttons(type="submit" form="toRegister" name="account" value="register") Register
+        when "register"
+          form.textbox#toRegister(action="/register", method="post")
+            input#id(type="text" placeholder="ID: " name="id")
+            input#pw(type="password" placeholder="PW: " name="pw")
+            input#name(type="text" placeholder="Name: " name="name")
+          form#toLogin(action="/", method="post" style="display:inline-block;")
+          button.buttons(type="submit" form="toLogin" name="account" value="login") Login
+          button.buttons(type="submit" form="toRegister" style="border-top-color:#FFFFFF") Register
+        when "logined"
+          form.textbox#toLogin(action="/logout", method="post")
+            p Hello,
+            p(style="text-align:center;")= userId + '!'
+          form(action="/", method="post" style="display:inline-block;")
+          button.buttons(type="submit" form="toLogin" name="account" value="login" style="width:9em;") Logout

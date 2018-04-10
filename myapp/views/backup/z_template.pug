@@ -1,0 +1,55 @@
+- dict = {1:{1:'1번'},2:{2:'2번'},3:{2.1:'2.1번'},4:{3:'3번'},5:{3.1:'3.1번'},6:{3.2:'3.2번'},7:{4:'참고자료'},8:{5:'test'}}
+//- - dict = {1:{'1':'1번'},2:{'2':'2번'},3:{'2.1':'2.1번'},4:{'3':'3번'},5:{'3.1':'3.1번'},6:{'3.2':'3.2번'},7:{'4':'참고자료'},8:{'5':'test'}}
+
+article(class="article" id="article")
+
+  //- header
+  header(class="major") Template
+
+  //- time
+  span(onclick="showDate()" id="date") #{time}
+
+  //- index
+  fieldset(class="fieldset" id="index")
+    legend(class="legend" id="index") 목차
+    dl
+      //- mixin index
+      mixin index(num, title)
+        dt
+          a(href="#s-"+num)= num
+          | . #{title}
+      //- exec index
+      -for(var i in dict)
+        +index(Object.keys(dict[i]), dict[i][Object.keys(dict[i])])
+
+  //- mixin content
+  mixin content(i, num, title)
+    div(id="s-"+num)
+
+      //- title size
+      unless String(num).includes('.')
+        h2
+          a(href="#index")= num + '.'
+          |  #{title}
+          span.edit: a(href="/edit/template?section="+i+"#s-"+num) [편집]
+      else
+        h3
+          a(href="#index")= num + '.'
+          |  #{title}
+          span.edit: a(href="/edit/template?section="+i+"#s-"+num) [편집]
+      hr
+
+      //- text & edit
+      if section == i
+        form.artclForm(action="/edit/template?section="+i method="post")
+          textarea.artclText(name="text",)
+            if articles[i-1]
+              | #{articles[i-1].article }
+          input.artclSummit(type="submit")
+      else
+        if articles[i-1]
+          p!= articles[i-1].article
+
+  //- exec context
+  -for(var i in dict)
+    +content(i, Object.keys(dict[i]), dict[i][Object.keys(dict[i])])

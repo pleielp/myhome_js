@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    title Plei@Home
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/stylesheets/main.css")
+    link(rel="stylesheet", href="/stylesheets/document.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="shortcut icon" href="images/pleiathome_logo2.ico" type="image/x-icon")
+    //- link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+    script(type="text/javascript" src="/javascripts/functions.js")
+    script(type="text/javascript" src="../myapp.js")
+
+    //- error alert
+    case error
+      when 'no_account': script.
+        alert("Wrong Id or password.")
+      when 'duplicated_ID': script.
+        alert("Duplicated ID.")
+      when 'edit_permission': script.
+        alert("Permission denied.")
+  body
+    div#wrapper
+      div#main
+        div.inner
+          header#header
+            a.logo(href="/").
+              #[strong PLEI]@HOME
+            div.right_header
+              //- div.login
+              //-   if userId != 0
+              //-     form(action="/logout" method="post" class="logout_form")
+              //-       span#userId #{userId}
+              //-       button(type="submit" id="logout_button") logout
+              //-       input(type="hidden" name="articleId" value=articleId)
+              //-   else
+              //-     case login_state
+              //-       when 0
+              //-         form(action="" mtehod="get" class="login_form")
+              //-           button(type="submit" id="login_button") register
+              //-         form(action="" method="get" class="login_form")
+              //-           input(type="hidden", name="login_state" value=1)
+              //-           button(type="submit" id="login_button") login
+              //-       when 1   
+              //-         form(action="/login" method="post" class="login_form")
+              //-           input(type="hidden" name="articleId" value=articleId)
+              //-           button(type="submit" id="login_button") login
+              //-           input#id(type="text" name="id" placeholder="ID:")
+              //-           input#pw(type="password" name="pw" placeholder="PW:")
+              div.searchAndicons
+                form(action="search" method="get" class="search")
+                  input(type="text" placeholder="search")
+                  button(type="submit" id="search")
+                    i(class="fa fa-search")
+                div.github
+                  a#github(href="https://github.com/pleielp")
+                    i(class="fa fa-github")
+                div.thumb
+                  form#thumb_form(action="" method="get")
+                    input(type="hidden" name="thumb" value="1")
+                    case thumb
+                      when 0
+                        i#thumb_no(class="fa fa-thumbs-up" onclick="document.getElementById('thumb_form').submit()")
+                        div#thumb_count_no #{count}
+                      when 1
+                        i#thumb_yes(class="fa fa-thumbs-up" onclick="document.getElementById('thumb_form').submit()")
+                        div#thumb_count_yes #{count}
+          aside#aside
+            nav#nav
+              div.major Project
+              ul
+                form#web(action="/web" method="get")
+                  li
+                    span#project1(onclick="document.getElementById('web').submit()"
+                      style=articleId=='web'?`border-bottom-color:#F56A6A`:`border-bottom-color:rgba(210, 215, 217, 0.75)`) Web
+                form#os(action="/os" method="get")
+                  li
+                    span#project2(onclick="document.getElementById('os').submit()"
+                      style=articleId=='os'?`border-bottom-color:#F56A6A`:`border-bottom-color:rgba(210, 215, 217, 0.75)`) Os
+                form#template(action="/template" method="get")
+                  li
+                    span#project3(onclick="document.getElementById('template').submit()"
+                    style=articleId=='template'?`border-bottom-color:#F56A6A`:`border-bottom-color:rgba(210, 215, 217, 0.75)`) Template
+          section#section
+            div.inner
+              case articleId
+                when 'home'
+                  include home
+                when 'web'
+                  include web
+                when 'os'
+                  include os
+                when 'template'
+                  include template
+              //- block content
+          footer#footer
+            p.shortcut.
+              #[a(href="/") 홈으로]  &nbsp;&nbsp;| &nbsp;&nbsp;  #[a(href="#header") 맨위로]
+            p(class="copyleft") BY PLEI. COPYLEFT, ALL RIGHT UNRESERVED.
+            

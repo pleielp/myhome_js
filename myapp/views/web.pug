@@ -1,0 +1,16 @@
+extends layout
+
+block sideMenu
+  include sidemenu
+
+block content
+
+  //- menu list
+  -
+    var dict = {1:{1:'개요'},
+                2:{2:'정적 웹'},3:{2.1:'HTML5'},4:{2.2:'CSS'},5:{2.3:'Javascript'},
+                6:{3:'서버'},7:{3.1:'nodeJs(npm)'},8:{3.2:'Express'},
+                9:{4:'데이터베이스'},10:{4.1:'MySQL'},
+                11:{5:'참고자료'}}
+  
+  include article

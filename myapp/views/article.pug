@@ -1,0 +1,72 @@
+//- article
+article(class="article" id="article")
+
+  //- header
+  header.major= topic[0].toUpperCase() + topic.slice(1)
+
+  //- time
+  span.article_side
+    
+    #{time}
+
+  //- index
+  fieldset(class="fieldset" id="index")
+    legend(class="legend" id="index") 목차
+    dl
+      //- mixin index
+      mixin index(num, title)
+        dt
+          a(href="#s-"+num)= num
+          | . #{title}
+      //- exec index
+      -for(var i in dict)
+        +index(Object.keys(dict[i]), dict[i][Object.keys(dict[i])])
+
+  //- mixin content
+  mixin content(i, num, title)
+    div(id="s-"+num)
+
+      //- title size
+      //- big title
+      unless String(num).includes('.')
+        h2
+          a(href="#index")= num + '.'
+          |  #{title}
+          span.edit: a(href="/edit/"+topic+"?section="+i+"#s-"+num) [편집]
+      //- small title
+      else
+        h3
+          a(href="#index")= num + '.'
+          |  #{title}
+          span.edit: a(href="/edit/"+topic+"?section="+i+"#s-"+num) [편집]
+      hr
+
+      -var article_there = 0
+      -for(var article_num in articles)
+        //- data on database
+        if articles[article_num].id == i
+          //- edit mode
+          if section == i
+            form.artclForm(action="/edit/"+topic+"?section="+i+"#s-"+num method="post")
+              textarea.artclText(name="text")
+                | #{articles[article_num].article}
+              input.artclSummit(type="submit")
+          //- -article_there += 1
+          //- text mode
+          else
+            span!= articles[article_num].article
+          //- p.
+          //-   !{articles[article_num].article}
+          -article_there += 1
+      if !article_there
+        if section == i
+          form.artclForm(action="/edit/"+topic+"?section="+i+"#s-"+num method="post")
+            textarea.artclText(name="text")
+            input.artclSummit(type="submit")
+          -article_there += 1
+        else
+          span [no text]
+
+  //- exec context
+  -for(var i in dict)
+    +content(i, Object.keys(dict[i]), dict[i][Object.keys(dict[i])])

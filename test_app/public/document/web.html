@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <title>Plei@Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Plei's blog">
+    <meta name="keywords" content="Plei">
+    <meta name="author" content="taeyoungkim">
+    <!-- <meta http-equiv="refresh" content="118"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link -->
+    <link rel="stylesheet" href="../document.css">
+    <!-- Scripts -->
+    <script type="text/javascript" src="../main.js"></script>
+</head>
+<body class="asdfad">
+    <article class="article" id="article">
+        <header class="major">Web</header>
+        <span onclick="showDate()" id="date">show_date error</span>
+        <span onclick="iframeheight()" id="date3">iframeheight</span>
+        <span id="date2">show_date error</span>
+        <fieldset class="fieldset" id="index">
+            <legend class="legend">목차</legend>
+            <dl>
+                <dt><a href="#s-1">1</a>. 개요</dt>
+                <dt><a href="#s-2">2</a>. 상세</dt>
+                <dd><a href="#s-2.1">2.1</a>. 문서작성 문법들</dd>
+                <dt><a href="#s-3">3</a>. 설치</dt>
+                <dd><a href="#s-3.1">3.1</a>. 윈도우즈</dd>
+                <dd><a href="#s-3.2">3.2</a>. macOS</dd>
+                <dt><a href="#s-#">#</a>. 참고자료</dt>
+            </dl>
+        </fieldset>
+        
+        <div id="s-1">
+            <h2 id="s-1"><a href="#index">1.</a> 개요</h1><hr>
+            <p>
+                HTML, CSS, JS 등을 이용해 블로그를 겸할 수 있는 <a href="https://namu.wiki/w/웹사이트">웹사이트</a>를 만들어 볼 것.
+            </p>
+        </div>
+            
+        <div id="s-2">
+            <h2><a href="#index">2.</a> 상세</h1><hr>
+            <p></p>
+        </div>
+
+        <div id="s-2.1">
+            <h3><a href="#index">2.1.</a> 문서작성 문법들</h3><hr>  
+            
+            <div>
+                <li>블록 문단
+                    <pre>
+                        &lt;p title=""&gt;&lt;/p&gt;
+                    </pre>
+                </li>
+                <p title="start of WHO">
+                    The WHO was found in 1948
+                </p>
+
+                <li>인라인 인용 &lt;q&gt;&lt;/q&gt;</li>
+                <q>adf</q>
+                <br><br>
+
+                <li>블록 인용 &lt;blockquote cite&gt;&lt;/blockquote&gt;</li>
+                <blockquote cite="">For 50 years, WWF has been protecting the future of nature.
+                    The world's leading conservation organization,
+                    WWF works in 100 countries and is supported by
+                    1.2 million members in the United States and
+                    close to 5 million globally.
+                </blockquote>
+
+                <li>코드 &lt;code&gt;&lt;/code&gt;</li>
+                <code>sudo apt-get install</code>
+
+                <li>문단 내 인용 &lt;p&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/p&gt;</li>
+                <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+                <li>축약형 &lt;abbr&gt;&lt;/abbr&gt;</li>
+                <p title="start of WHO">
+                    The <abbr title="World Health Organization">WHO</abbr> was found in 1948
+                </p>
+
+                <li>양방향 오버라이드 &lt;bdo dir="ltr, rtl"&gt;&lt;/bdo&gt;</li>
+                <bdo dir="ltr">This text will be written from right to left</bdo>
+                <br><br>
+
+                <li>주소 &lt;address&gt;&lt;/address&gt;</li>
+                <address>
+                    Written by John Doe.<br>
+                    Visit us at:<br>
+                    Example.com<br>
+                    Box 564, Disneyland<br>
+                    USA
+                </address><br>
+
+                <li>글 장식</li>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="color:black">볼드 &lt;b&gt;&lt;/b&gt;</td>
+                            <td style="color:black">이탤릭 &lt;i&gt;&lt;/i&gt;</td>
+                            <td style="color:black">&lt;sup&gt;&lt;/sup&gt;</td>
+                            <td style="color:black">&lt;sub&gt;&lt;/sub&gt;</td>
+                        </tr>
+                        <tr>
+                            <td style="color:black"><b>bold</b></td>
+                            <td style="color:black"><i>italic</i></td>
+                            <td style="color:black"><sup>sup</sup></td>
+                            <td style="color:black"><sub>sub</sub></td>
+                        </tr>
+                        <tr>
+                            <td style="color:black">&lt;ins&gt;&lt;/ins&gt;</td>
+                            <td style="color:black">&lt;del&gt;&lt;/del&gt;</td>
+                            <td style="color:black">&lt;strong&gt;&lt;/strong&gt;</td>
+                            <td style="color:black">&lt;small&gt;&lt;/small&gt;</td>
+                        </tr>
+                        <tr>
+                            <td style="color:black"><ins>ins</ins></td>
+                            <td style="color:black"><del>del</del></td>
+                            <td style="color:black"><strong>strong</strong></td>
+                            <td style="color:black"><small>small</small></td>
+                        </tr>
+                        <tr>
+                            <td style="color:black">&lt;emphasized&gt;&lt;/emphasized&gt;</td>
+                            <td style="color:black">&lt;mark&gt;&lt;/mark&gt;</td>
+                            <td style="color:black">&lt;kbd&gt;&lt;/kbd&gt;</td>
+                            <td style="color:black">&lt;Samp&gt;&lt;/Samp&gt;</td>
+                        </tr>
+                        <tr>
+                            <td style="color:black"><emphasized>emphasized</emphasized></td>
+                            <td style="color:black"><mark>mark</mark></td>
+                            <td style="color:black"><kbd>ctrl+s</kbd></td>
+                            <td style="color:black"><Samp>Error!</Samp></td>
+                        </tr>
+                        <tr>
+                            <td style="color:black">&amp;lt;</td>
+                            <td style="color:black">&amp;gt;</td>
+                            <td style="color:black">&amp;nbsp;</td>
+                            <td style="color:black">&amp;amp;</td>
+                        </tr>
+                        <tr>
+                            <td style="color:black">&lt;</td>
+                            <td style="color:black">&gt;</td>
+                            <td style="color:black">&nbsp;(whitespace)</td>
+                            <td style="color:black">&amp;</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+
+                <li>리스트</li>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="color:black">비순서 리스트 &lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</td>
+                            <td style="color:black">순서 리스트 &lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</td>
+                            <td style="color:black">설명 리스트 &lt;dl&gt;&lt;dt&gt;&lt;/dt&gt;&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td style="color:black">
+                                <ul>
+                                    <li>unordered list 1</li>
+                                    <li>unordered list 2</li>
+                                    <ul>
+                                        <li>unordered list 3</li>
+                                        <li>unordered list 4</li>
+                                    </ul>
+                                </ul>
+                            </td>
+                            <td style="color:black">
+                                <ol type="A" start="1">
+                                    <li>ordered list 1</li>
+                                    <li>ordered list 2</li>
+                                </ol>
+                            </td>
+                            <td style="color:black">
+                                <dl>
+                                    <dt>description list 1</dt>
+                                    <dd>- description list 2</dd>
+                                    <dd>- description list 3</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <li>테이블 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th colsapn="" rowspan=""&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colsapn="" rowspan=""&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td colsapn="" rowspan=""&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;</li>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Left Aligned</td>
+                            <th>Center Aligned</td>
+                            <th>Right Aligned</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>col 3 is</td>
+                            <td>some wordy text</td>
+                            <td>$1600</td>
+                        </tr>
+                        <tr>
+                            <td>col 2 is</td>
+                            <td>centered</td>
+                            <td>$12</td>
+                            </tr>
+                        <tr>
+                            <td>zebra stripes</td>
+                            <td>are neat</td>
+                            <td>$1</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+
+                <li>이미지 &lt;picture&gt;&lt;img src="" alt="" width="" height=""&gt;&lt;/picture&gt;</li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="no image" width="200" height="233"><br>
+                <!-- <picture>
+                    <source media="(min-width:1000px)" srcset="../source/image.png" alt="no image" width="225" height="225" border="1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="no image" width="200" height="233"><br>
+                </picture>
+                <img src="../source/workplace.jpg" alt="Workplace" usemap="#workmap" width="200" height="190">
+                    <map name="workmap">
+                    <area shape="rect" coords="17,22,135,175" href="#">
+                    <area shape="rect" coords="145,86,167,125" href="#">
+                    <area shape="circle" coords="169,150,22" href="#">
+                    </map><br> -->
+
+                <li>음악 &lt;audio src="" type="audio/mpeg" preload="none, metadata, auto" autoplay loop controls&gt;&lt;/audio&gt;</li>
+                <audio src="https://player.bgmstore.net/mhxtJ/mp4" type="audio/mpeg" preload="metadata" loop controls>
+                </audio><br><br>
+                <!-- <audio preload="metadata" id="bgm" loop controls>
+                    <source src="../source/eternal_city.mp3" type="audio/mpeg">
+                </audio> -->
+                <!-- <script>
+                    var audio = document.getElementById('bgm');
+                    audio.volume = 0.3
+                </script> -->
+
+                <li>영상 &lt;video src="" type="video/mp4" poster="" preload="none, metadata, auto" autoplay loop controls width="" height=""&gt;&lt;/video&gt;</li>
+                <video src="https://pixabay.com/ko/videos/download/video-10339_medium.mp4" type="video/mp4" preload="metadata" loop controls width="360" height="240">
+                </video><br><br>
+                <!-- <video poster="../source/milky_way.jpg" preload="metadata" controls width="320" height="180" class="video-js vjs-default-skin" data-setup="{}">
+                    <source src="https://pixabay.com/ko/videos/download/video-10339_medium.mp4" type="video/mp4">
+                </video> -->
+
+                <li>인라인 프레임 &lt;iframe src="" width="" height="" name=""&gt;&lt;/iframe&gt;</li>
+                <iframe width="427" height="240" src="" name="youtube"></iframe>
+                    <a href="https://www.youtube.com/embed/Tgokaw2ZOoA?autoplay=0" title="Mitis-Endeavours" target="youtube">Endeavours</a>
+                    <a href="https://www.youtube.com/embed/Jl7keidAvpU?autoplay=0" title="Mitis-Dope arcade" target="youtube">Dope arcade</a><br><br>
+
+                <li>링크 &lt;a href="" target="_blank, _self, _parent, _top"&gt;&lt;/a&gt;</li>
+                <a href="google.com" target=_self>구글</a>
+                <a href="https://www.nasa.gov/">
+                    <img src="http://www.nasa.gov/sites/default/files/images/nasaLogo-570x450.png" alt="no image" title="NASA" width="57" height="45">
+                </a><br><br>
+
+                <li>제출양식 
+                    <pre>&lt;form action="" method="GET, POST" accept-charset="utf-8" name=""&gt;
+                            &lt;fieldset&gt;
+                        &lt;legend&gt;&lt;/legend&gt;
+                        &lt;input type="text, submit reset, password, checkbox, radio, file, image, hidden" name="" value="" title="" /&gt;
+                        &lt;textarea cols="" rows=""&gt;&lt;/textarea&gt;
+                        &lt;select mutiple&gt;&lt;optgroup&gt;&lt;option&gt;&lt;/option&gt;&lt;/optgroup&gt;&lt;/select&gt;
+                        &lt;/fieldset&gt;
+                        &lt;/form&gt;
+                    </pre>
+                </li>
+                <form action="input.txt" method="GET" accept-charset="utf-8" name="test form">
+                    <fieldset>
+                        <legend>fieldset</legend>
+                        <input type="text" action="input.txt" name="search" title="text입력"/>
+                        <input type="submit" />
+                        <input type="reset" /><br>
+                        <input type="password" /><br>
+                        <input type="checkbox" id="cb" value="check" />
+                            <label for="cb">checkbox</label>
+                        <input type="radio" name="ab" value="man"/>남자
+                        <input type="radio" name="ab" value="woman"/>여자<br>
+                        <select multiple>
+                            <option>alphabet</option>
+                            <optgroup>
+                                <option>a</option>
+                                <option>b</option>
+                            </optgroup>
+                            <option>number</option>
+                            <optgroup>
+                                <option>1</option>
+                                <option>2</option>
+                            </optgroup>
+                        </select>
+                        <input type="file" />
+                        <input type="image" />
+                        <input type="hidden" />
+                        <textarea cols="12" rows="3"></textarea>
+                    </fieldset>
+                </form><br>
+
+                <li>블록 태그 &lt;div&gt;&lt;/div&gt;</li>
+                <div class="city main" style="display:inline-block">
+                    <p style="margin-top:0">London</p>
+                </div>
+                <li>인라인 태그 &lt;span&gt;&lt;/span&gt;</li>
+                <span id="show_date">span</span><br><br>
+
+                <li>버튼 &lt;button onclick="function()"&gt;&lt;/button&gt;</li>
+                <button onclick="hide()" style="display:inline-block">hide element</button>
+                <button onclick="show()" style="display:inline-block">show element</button>
+                <button type="button" onclick="show_date()">show date</button><br><br>
+
+                <li>내부 스타일시트 &lt; style=""&gt;</style></li>
+                <li>외부 스타일시트 &lt;link rel="stylesheet" href=""&gt;</li>
+                <li>내부 스크립트 &lt;script&gt;&lt;/script&gt;</li>
+                <script>
+                    function hide(){
+                        var city_element = document.getElementsByClassName("city")
+                        for (var i = 0; i < city_element.length; i++) {
+                            city_element[i].style.display = "none";
+                        }
+                    }
+                    function show(){
+                        var city_element = document.getElementsByClassName("city")
+                        for (var i = 0; i < city_element.length; i++) {
+                            city_element[i].style.display = "inline-block";
+                        }
+                    }
+                    function show_date(){
+                        document.getElementById("show_date").innerHTML = Date()
+                    }
+                </script>
+                <li>외부 스크립트 &lt;script type="text/javascript" src=""&gt;</li>
+
+            </div>
+        </div>
+
+        <div id="s-3">
+            <h2><a href="#index">3.</a> 설치</h1><hr>
+            <p></p>
+        </div>
+
+        <div id="s-3.1">
+            <h3><a href="#index">3.1.</a> 윈도우즈</h3><hr>
+            <p></p>
+        </div>
+
+        <div id="s-3.2">
+            <h3><a href="#index">3.2.</a> macOS</h3><hr>
+            <p></p>
+        </div>
+
+        <div id="s-#">
+            <h2><a href="#index">#.</a> 참고자료</h1><hr>
+            <pre>
+                <a href="https://www.w3schools.com">W3Schools Online Web Tutorials</a>
+                <a href="https://html5up.net/editorial/download">Editorial | HTML5 UP</a>
+            </pre>
+        </div>
+
+    </article>
+</body>
+</html>

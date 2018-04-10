@@ -1,0 +1,361 @@
+@import url(http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb);
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "NanumGothic", "나눔고딕", "NanumGothicWeb", "맑은 고딕",
+    "Malgun Gothic", Dotum;
+}
+
+a {
+  color: rgba(127, 136, 143);
+  text-decoration: none;
+}
+a:hover {
+  color: #f56a6a;
+}
+
+/* #wrapper        {
+} */
+
+/* #main           {
+} */
+
+#main .inner {
+  padding: 0 2em 0 2em;
+  margin: 0 auto;
+}
+
+#header {
+  position: relative;
+  border-bottom: 5px solid #f56a6a;
+  margin: 0;
+  padding: 0em 0 0.0em 0;
+  height: 6em;
+}
+
+#header .logo {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5em;
+}
+
+#header .logo strong {
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color: initial;
+}
+
+#header .right_header {
+  display: block;
+  right: 0;
+  padding-top: 1em;
+}
+
+/*
+#header .login  {
+  float: right;
+  margin-top: 1em;
+  width: 14.4em;
+  height: 1.3em;
+}
+
+#header .login .login_form  {
+  width: 14.4em;
+  height: 1.3em;
+}
+
+#header .login #id, #pw {
+  margin-right: -6px;
+  padding: 0 5.3333px;
+  border: none;
+  border-left: 2px solid #f56a6a;
+  border-right: 2px solid #f56a6a;
+  width: 5.8em;
+  height: 1.56em;
+}
+
+#header .login #id:focus, #pw:focus {
+  outline: 2px solid #f56a6a;
+}
+
+#header .login #login_button {
+  margin-right: -7px;
+  border: none;
+  border-left: 2px solid #f56a6a;
+  border-right: 2px solid #f56a6a;
+  padding: 0 6.4px;
+  height: 1.3em;
+  color: rgba(127, 136, 143);
+  background-color: #FFFFFF;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#header .login .logout_form  {
+  float: right;
+  margin-top: 1em;
+  width: 14.4em;
+  height: 1.3em;
+}
+
+#header .login #userId {
+  float: left;
+  padding: 0 5.3333px;
+  border: none;
+  border-left: 2px solid #f56a6a;
+  height: 1.3em;
+  color: rgba(127, 136, 143);
+  font-family: Arial;
+}
+
+#header .login #login_button:focus {
+  outline: 2px solid #f56a6a;
+  outline-offset: -2px;
+}
+
+#header .login #logout_button {
+  float: right;
+  border: none;
+  border-left: 2px solid #f56a6a;
+  padding: 0 6.4px;
+  height: 1.3em;
+  color: rgba(127, 136, 143);
+  background-color: #FFFFFF;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#header .login #logout_button:focus {
+  outline: 2px solid #f56a6a;
+  outline-offset: -2px;
+} */
+
+#header .searchAndicons  {
+  position: absolute;
+  right: 0;
+  bottom: 0.5em;
+  height: 2em;
+}
+
+#header .search {
+  float: right;
+  width: 14.4em;
+  height: 2em;
+  font-size: 16px;
+}
+
+#header .search input {
+  float: right;
+  padding: 0 2em 0 0.4em;
+  text-rendering: auto;
+  color: rgba(127, 136, 143);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  font: 400 16px Arial;
+  border: none;
+  border-top: #ffffff;
+  border-left: 2px solid #f56a6a;
+  border-bottom: #ffffff;
+  border-right: #ffffff;
+  border-image: none;
+  width: calc(12em - 2px);
+  height: 2em;
+  position: absolute;
+}
+
+#header .search input:focus {
+  outline: 2px solid #f56a6a;
+}
+
+#header .search input::placeholder {
+  font-size: 1em;
+}
+
+#header .search #search {
+  float: right;
+  position: relative;
+  padding: 0;
+  border: none;
+  color: #f56a6a;
+  background-color: transparent;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#header .search #search:focus {
+  border: 2px solid #f56a6a;
+  outline: none;
+}
+
+#header .github {
+  float: right;
+  margin-right: 0.5em;
+}
+
+#header #github {
+  float: right;
+  padding: 6px 0 6px 0;
+  box-sizing: border-box;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#header .thumb {
+  float: right;
+  height: 43px;
+}
+
+#header #thumb_no {
+  float: right;
+  margin-bottom: -5px;
+  padding: 6px 0 0px 0;
+  box-sizing: border-box;
+  border-width: 0px;
+  width: 1.6em;
+  height: 1.6em;
+  color: rgba(127, 136, 143);
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#header #thumb_yes {
+  float: right;
+  margin-bottom: -6px;
+  padding: 6px 0 0px 0;
+  box-sizing: border-box;
+  border-width: 0px;
+  width: 1.6em;
+  height: 1.6em;
+  color: #f56a6a;
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#header #thumb_count_no {
+  color: rgba(127, 136, 143);
+  font-size: 0.5em;
+  text-align: center;
+}
+
+#header #thumb_count_yes {
+  color: #f56a6a;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+#thumb_no:hover, #thumb_yes:hover,
+#thumb_count_no:hover, #thumb_count_yes:hover{
+  color: #f56a6a;
+}
+
+aside {
+  margin: 1em 0 3em 0;
+  float: left;
+  width: 15%;
+  min-width: 6em;
+  max-width: 12.5em;
+}
+
+#nav .major {
+  border-bottom: 2px solid #f56a6a;
+  margin: 0;
+  padding: 0.5em 0 0.25em 0;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#nav ul li a {
+  border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: left;
+  text-decoration: none;
+}
+
+#nav ul li span {
+  border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  color: rgba(127, 136, 143);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#nav ul li span:hover {
+  color: #f56a6a;
+}
+
+#section {
+  margin: 1em 0 3em 0;
+  float: right;
+  width: 84%;
+}
+
+#section .inner {
+  padding: 0 2em 0 2em;
+}
+
+#section .major {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 0 0.25em 0;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+#section .article_side {
+  float: right;
+  margin-top: 1em;
+  margin-right: -0em;
+  color: rgba(127,136,143);
+  font-size: 0.9em;
+}
+
+#footer {
+  border-top: 2px solid #f56a6a;
+  display: block;
+  clear: both;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 0.5em auto;
+}
+
+#footer .shortcut {
+  margin: 0.8em 0 0.8em 0;
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+#footer a {
+  color: #222222;
+}
+
+#footer .copyleft {
+  margin: 0 0 0.8em;
+  font-size: 0.5em;
+  font-weight: 100;
+}

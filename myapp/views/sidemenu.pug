@@ -1,0 +1,28 @@
+//- mixin sidemenu: inner links
+        //- style= topic===menu ? 'border-bottom-color:#F56A6A':'border-bottom-color:rgba(210, 215, 217, 0.75)')= menu_toCapital
+mixin sidemenu(menu, topic)
+  li
+    -var menu_toCapital = menu[0].toUpperCase() + menu.slice(1) 
+    a#menu(href="/project/"+menu style="border-bottom-color:" + (topic===menu ? '#F56A6A' : 'rgba(210, 215, 217, 0.75)'))= menu_toCapital
+    
+
+//- mixin sidemenu2: external links
+mixin sidemenu2(name, link)
+  li
+    a(href=link)= name
+
+//- exec sidemenu
+div.major Project
+ul
+  -for(var menu_num in menus)
+    //- change variable content according to menu's name
+    +sidemenu(menus[menu_num], topic)
+
+div.major News
+ul
+  +sidemenu('news', topic)
+
+div.major Links
+ul
+  +sidemenu2('C<>DE & T4LK5', 'https://www.codentalks.com/')
+  +sidemenu2('OKKY', 'https://okky.kr/')

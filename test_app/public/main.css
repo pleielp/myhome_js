@@ -1,0 +1,239 @@
+@import url(http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb);
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "NanumGothic", "나눔고딕", "NanumGothicWeb", "맑은 고딕",
+    "Malgun Gothic", Dotum;
+}
+
+a {
+  color: rgba(127, 136, 143);
+  text-decoration: none;
+}
+a:hover {
+  color: #f56a6a;
+}
+
+/* #wrapper        {
+} */
+
+/* #main           {
+} */
+
+#main .inner {
+  padding: 0 2em 0 2em;
+  margin: 0 auto;
+}
+
+#header {
+  border-bottom: 5px solid #f56a6a;
+  margin: 0;
+  padding: 3em 0 1em 0;
+  height: 3em;
+}
+
+#header .logo {
+  font-size: 1.5em;
+}
+
+#header .logo strong {
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color: initial;
+}
+
+#header .search {
+  float: right;
+  margin-top: 1em;
+  width: 14.4em;
+  height: 2em;
+  font-size: 16px;
+}
+
+#header input {
+  float: right;
+  padding: 0 2em 0 0.4em;
+  text-rendering: auto;
+  color: rgba(127, 136, 143);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  font: 400 16px Arial;
+  border: none;
+  border-top: #ffffff;
+  border-left: 2px solid #f56a6a;
+  border-bottom: #ffffff;
+  border-right: #ffffff;
+  border-image: none;
+  width: calc(12em - 2px);
+  height: 2em;
+  position: absolute;
+}
+
+#header input:focus {
+  outline: 2px solid #f56a6a;
+}
+
+#header input::placeholder {
+  font-size: 1em;
+}
+
+#header #search {
+  float: right;
+  position: relative;
+  padding: 0;
+  border: none;
+  color: #f56a6a;
+  background-color: transparent;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#header .icon {
+  float: right;
+  margin-top: 1em;
+  margin-right: 0.5em;
+}
+
+#header #github {
+  float: right;
+  padding: 6px 0 6px 0;
+  box-sizing: border-box;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+aside {
+  margin: 1em 0 3em 0;
+  float: left;
+  width: 15%;
+  min-width: 6em;
+  max-width: 12.5em;
+}
+
+#nav .major {
+  border-bottom: 2px solid #f56a6a;
+  margin: 0;
+  padding: 0.5em 0 0.25em 0;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#nav ul li a {
+  border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: left;
+  text-decoration: none;
+}
+
+#nav ul li span {
+  border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  color: rgba(127, 136, 143);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* #nav ul li button {
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+  background: #ffffff;
+  color: rgba(127, 136, 143);
+  text-align: left;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: initial;
+  cursor: pointer;
+}
+
+#nav ul li p {
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(210, 215, 217, 0.75);
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+  background: #ffffff;
+  color: rgba(127, 136, 143);
+  text-align: left;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: initial;
+  cursor: pointer;
+} */
+
+#nav ul li span:hover {
+  color: #f56a6a;
+}
+
+#section {
+  margin: 1em 0 3em 0;
+  float: right;
+  width: 84%;
+}
+
+#section .inner {
+  padding: 0 2em 0 2em;
+}
+
+#section .article {
+  font-size: 1em;
+  margin: 0 0 2em 0;
+}
+
+#footer {
+  border-top: 2px solid #f56a6a;
+  display: block;
+  clear: both;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 0.5em auto;
+}
+
+#footer .shortcut {
+  margin: 0.8em 0 0.8em 0;
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+#footer a {
+  color: #222222;
+}
+
+#footer .copyleft {
+  margin: 0 0 0.8em;
+  font-size: 0.5em;
+  font-weight: 100;
+}
+
+#article2 iframe {
+  margin: 0;
+  border-width: 0px;
+  width: 100%;
+  block-size: 6000px;
+}
